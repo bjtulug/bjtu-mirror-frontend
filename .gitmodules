@@ -1,0 +1,3 @@
+[submodule "themes/mirror"]
+	path = themes/mirror
+	url = https://github.com/bjtulug/hexo-theme-mirror
