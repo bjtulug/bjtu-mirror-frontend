@@ -5,22 +5,22 @@ pipeline {
   }
   stages {
     stage('Start') {
-      agent { docker 'node:lts-alpine' }
+      agent { 
+        docker {
+          image 'node:lts-alpine'
+          args '-v /home/bob/public:/tmp/public'
+        } 
+      }
       stages{
         stage('Enviroument') {
           steps {
+            sh 'ln -s /tmp/public public'
             sh 'npm install'
           }
         }
         stage('Build') {
           steps {
             sh 'npx hexo generate && npx hexo deploy'
-          }
-        }
-        stage('Check') {
-          steps {
-            echo 'Hello world'
-            sh 'sleep 10 && ls'
           }
         }
       }
