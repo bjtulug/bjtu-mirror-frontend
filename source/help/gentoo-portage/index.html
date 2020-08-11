@@ -1,0 +1,27 @@
+---
+title: Gentoo Linux ebuilds 镜像使用帮助
+date: 2017-11-14 20:54:26
+layout: help
+---
+<code>gentoo-portage</code> 镜像为 Gentoo Linux 的 ebuilds 镜像，软件包（distfiles, stage3, liveDVD）镜像为 <code> gentoo</code>。
+<h3>使用方式</h3>
+<h4>以下配置方式参见 <a href="https://wiki.gentoo.org/wiki/Handbook:Parts/Installation/Base#Gentoo_ebuild_repository">Gentoo Handbook: Install Base System: Gentoo ebuild repository</a>，为推荐的配置方法，建议在 <code>make.conf</code> 配置的用户按照 Handbook 修改。</h4>
+<ol>
+	<li>首先，创建 <code>/etc/portage/repos.conf</code> 目录（如果不存在的话）（我也很纠结他们目录为什么不用 .d 结尾）。
+		<pre>
+# mkdir --parents /etc/portage/repos.conf </pre>
+	</li>
+	<li>复制一份配置样例到刚才创建的目录。
+		<pre>
+# cp /usr/share/portage/config/repos.conf /etc/portage/repos.conf/gentoo.conf </pre>
+	</li>
+	<li>最后，修改该文件的 <code>sync-uri</code> 变量为 <code class="highlight-rouge">rsync://mirror.bjtu.edu.cn/gentoo-portage</code>，样例如下。
+		<pre>
+[gentoo]
+location = /usr/portage
+sync-type = rsync
+sync-uri = rsync://mirror.bjtu.edu.cn/disk3/gentoo-portage
+auto-sync = yes</pre>
+	</li>
+</ol>
+<p>使用 <code class="highlight-rouge"># emerge --sync</code> 同步本地的 ebuilds。</p>

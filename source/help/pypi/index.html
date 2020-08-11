@@ -1,0 +1,17 @@
+---
+layout: help
+title: pypi 镜像使用帮助
+date: 2017-12-07 19:39:15
+---
+<h3>临时使用</h3>
+<pre>
+pip install -i https://mirror.bjtu.edu.cn/pypi/web/simple/ some-package
+</pre>
+<p>注意 simple 不能少。</p>
+<h3>设为默认</h3>
+修改 <code class="highlight-rouge">~/.config/pip/pip.conf</code> (Linux), <code class="highlight-rouge">%APPDATA%\pip\pip.ini </code>(Windows 10) 或 <code class="highlight-rouge">$HOME/Library/Application Support/pip/pip.conf</code> (macOS) (没有就创建一个)， 修改 <code class="highlight-rouge">index-url</code> 至镜像，例如
+<pre>
+[global]
+index-url = https://mirror.bjtu.edu.cn/pypi/web/simple/
+</pre>
+<p>pip 和 pip3 并存时，只需修改 ~/.pip/pip.conf。</p>

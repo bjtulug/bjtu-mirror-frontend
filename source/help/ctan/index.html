@@ -1,0 +1,18 @@
+---
+title: CTAN 镜像使用帮助
+date: 2017-12-07 11:08:26
+layout: help
+---
+<h3>CTAN (The Comprehensive TeX Archive Network) 镜像源可以使用 TeX Live 管理器 tlmgr 更改。</h3>
+
+<p>在命令行中执行</p>
+<pre class="highlight-rough">
+<code>tlmgr option repository https://mirror.bjtu.edu.cn/ctan/systems/texlive/tlnet</code>
+</pre>
+<p>即可永久更改镜像源。</p>
+
+<p>如果只需要临时切换，可以用如下命令：</p>
+<pre class="highlight-rough">
+<code>tlmgr update --all --repository https://mirror.bjtu.edu.cn/ctan/systems/texlive/tlnet</code>
+</pre>
+<p>其中的<code class="highlight-rouge">update --all</code>指令可根据需要修改。</p>

@@ -1,0 +1,70 @@
+---
+title: 新闻
+layout: news
+date: 2017-11-14 20:54:26
+---
+<h2><a name="Clean-Long-Log"># 清除根目录下过大日志</a></h2>
+<div class="news-info">
+	<p>
+		<i class="fa fa-calendar"></i> <span>2019-03-01</span>
+		<i class="fa fa-user"></i> <span>AlynxZhou</span>
+	</p>
+</div>
+<p>由于 Nginx 的日志体积增加，占据了根目录剩余的少量空间，导致寒假期间 mirror 未能及时同步镜像。今天清空了旧的 Nginx 日志，重新挂载了硬盘，已经可以继续运行同步进程了。至于为什么寒假的事情现在才处理……因为这个 mirror 设置为只有校园网内网才能 ssh 连接，同时校园网 VPN 的 Linux 客户端不好用，我又没在 Windows 下处理过 ssh……（逃</p>
+<h2><a name="Remove-Change-Mirrors"># 添加新硬盘完成</a></h2>
+<div class="news-info">
+	<p>
+		<i class="fa fa-calendar"></i> <span>2018-07-22</span>
+		<i class="fa fa-user"></i> <span>AlynxZhou</span>
+	</p>
+</div>
+<p>由于原有硬盘已经满载导致 mirror 在一段时间内无法同步（“吃饱啦！”），经过沟通信息中心又提供了一倍的硬盘容量（“接着给我吃！”），近日正在将旧硬盘的部分数据转移至新硬盘（没有 LVM 的无聊世界啊），转移工作预计将在今日完成，随后即可正常同步，部分镜像由于较长时间未同步可能需要一定时间同步（“饿坏了！”），同时部分路径发生变化，请参照help重新设置。如您发现使用问题可以点击站点底部的 issue 链接进行反馈。（专事专干，各位不要再往我博客底下评论 mirror 问题了好吗……）</p>
+<h2><a name="Remove-Change-Mirrors"># 移除更换部分镜像</a></h2>
+<div class="news-info">
+	<p>
+		<i class="fa fa-calendar"></i> <span>2017-12-17</span>
+		<i class="fa fa-user"></i> <span>AlynxZhou</span>
+	</p>
+</div>
+<p>startos 和 qomo 目录为空，已经被移除。同时由于 cinnarch 项目早已经更名为 antergos，我们已经将这个镜像的名字更改为 <a href="/antergos/">antergos</a>。</p>
+<h2><a name="Switch-to-HTTPS"># 镜像站切换到 HTTPS 协议</a></h2>
+<div class="news-info">
+	<p>
+		<i class="fa fa-calendar"></i> <span>2017-12-15</span>
+		<i class="fa fa-user"></i> <span>AlynxZhou</span>
+	</p>
+</div>
+<p>出于 BLUG 用户的友（强）好（烈）建（吐）议（槽）以及各大镜像站都开启了 HTTPS 访问的现状，本站即日起启用 HTTPS 协议，如果您还在使用 HTTP 协议，镜像站会自动跳转为 HTTPS 协议。</p>
+<p>此外，由于相关部门要求，本站关闭了 nginx 的 autoindex 模块，如果您访问各镜像目录返回 403 错误，为正常情况，已经使用中的包管理器不会受到影响，本站正在积极寻找替代方案。</p>
+<p>如果在使用过程中出现问题，欢迎点击站点底部的 issue 链接进行反馈。</p>
+<h2><a name="Remove-Unused-Mirrors"># 准备移除部分失效镜像</a></h2>
+<div class="news-info">
+	<p>
+		<i class="fa fa-calendar"></i> <span>2017-12-12</span>
+		<i class="fa fa-user"></i> <span>AlynxZhou</span>
+	</p>
+</div>
+<p>CRUX PPC 带着他的软件仓库跑路了，我们我们没有没有办法，原价一百块两百块的域名统统只要二十块……（这段注释掉行不）</p>
+<p>事情的经过是这样的，自从发现 CRUX PPC 在列表里一直坚挺 failed 之后，我去访问了 CRUX PPC 项目的网址 <a href="http://www.cruxppc.org/">cruxppc.org</a> 发现他们把标题改成了“此网站的域名可以出售”（还有中文，真贴心）。</p>
+<p>考虑到项目已经撤销，首先建议仍在使用此发行版的用户转移到别的发行版（真的有吗？），然后本站将移除此镜像，以便为其他用户较多的镜像提供空间。</p>
+<p>在此次排查中还发现 <a href="/kde/">KDE</a> 镜像目录长期为空，推测使用用户较少（都空了还没人知道），准备移除此目录，如无特殊需要请使用各自发行版提供的 KDE 桌面环境。</p>
+<p>startos 似乎已经停止开发（充满山寨气息的官网向我诉说着它的经历），如果有使用 startos 的用户，建议切换到看起来就更加靠谱的其他发行版（Ubuntu/LinuxMint/Fedora/openSUSE，非要支持国产发行版选 Deepin 也行啊，最起码人家做的不错也算小有名气……），同样下落不明的还有 Qomo Linux，由于情况不明暂时进行保留，待获取到确定消息之后进行下一步动（清）作（理）。</p>
+<p>如果你很不幸的成为上述跑路发行版的使用者之一，建议在代价不高的前提下及早更换成有维护的发行版，安全有保障，使用无人维护的发行版非常危险（虽然这些发行版看起来连文档都没有，使用没有文档的发行版同样危险）。如果你面临着较高的更换代价（谁让你在生产环境上使用这种小白鼠发行版啊喂），事实上本站保留这些已经不更新的软件仓库对你也没有什么用处。</p>
+<p>如果对上述有疑问，欢迎点击站点底部的 issue 链接进行反馈。</p>
+<h2><a name="Added-Kali"># 增加了 Kali Linux 镜像</a></h2>
+<div class="news-info">
+	<p>
+		<i class="fa fa-calendar"></i> <span>2017-12-10</span>
+		<i class="fa fa-user"></i> <span>AlynxZhou</span>
+	</p>
+</div>
+<p>镜像站新增了 Kali Linux 的软件包仓库镜像和安装镜像，由于镜像服务器阻止来自学校外面的 ssh 连接，Kali 官方推荐的由其进行 ssh 触发同步的方式无法使用，目前暂定同步上游为清华大学的开源镜像站，可以放心使用。</p>
+<h2><a name="Updated-Website"># 镜像站网页更新</a></h2>
+<div class="news-info">
+	<p>
+		<i class="fa fa-calendar"></i> <span>2017-12-10</span>
+		<i class="fa fa-user"></i> <span>AlynxZhou</span>
+	</p>
+</div>
+<p>镜像站网页更新为使用 hexo 生成的页面，部分功能仍在开发中，网站主题源码托管在 <a href="https://github.com/AlynxZhou/hexo-theme-mirror">这里</a>。</p>
+<p>现在可以在页面查看各镜像的同步状态，使用帮助（部分），以及服务器的流量状态。其中同步状态使用 ajax 每 10s 自动刷新。流量状态每分钟更新，需要手动刷新及清除缓存。</p>

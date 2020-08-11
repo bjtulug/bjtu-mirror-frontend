@@ -1,0 +1,7 @@
+---
+title: Arch Linux 软件仓库镜像使用帮助
+date: 2017-11-14 20:54:26
+layout: help
+---
+<p>编辑 <code class="highlight-rouge">/etc/pacman.d/mirrorlist</code>， 在文件的最顶端添加：<code class="highlight-rouge">Server = https://mirror.bjtu.edu.cn/disk3/archlinux/$repo/os/$arch</code></p>
+<p>更新软件包缓存：<code class="highlight-rouge"># pacman -Syy</code></p>
