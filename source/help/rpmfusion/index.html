@@ -10,15 +10,15 @@ sudo yum install --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusi
 </pre>
 <p>或者如下直接用镜像中的 rpm 包：</p>
 <pre>
-sudo yum install --nogpgcheck https://mirror.bjtu.edu.cn/disk2/rpmfusion/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirror.bjtu.edu.cn/disk2/rpmfusion/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo yum install --nogpgcheck https://mirror.bjtu.edu.cn/rpmfusion/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirror.bjtu.edu.cn/rpmfusion/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 </pre>
 <p>注意：没有将当前用户设为管理员的用户，需要将 <code class="highlight-rouge">sudo CMD</code> 替换为 <code class="highlight-rouge">su -c 'CMD'</code>，并输入 root 密码。</p>
 <h3>修改链接指向镜像</h3>
-<p>安装成功后，修改 <code class="highlight-rouge">/etc/yum.repos.d/</code> 目录下以 <code class="highlight-rouge">rpmfusion</code> 开头，以 <code class="highlight-rouge">.repo</code> 结尾的文件。具体而言，需要将文件中的 <code class="highlight-rouge">baseurl=</code> 开头的行等号后面链接中的 <code class="highlight-rouge">http://download1.rpmfusion.org/</code> 替换为 <code class="highlight-rouge">https://mirror.bjtu.edu.cn/disk2/rpmfusion/</code>，替换后的文件类似如下：</p>
+<p>安装成功后，修改 <code class="highlight-rouge">/etc/yum.repos.d/</code> 目录下以 <code class="highlight-rouge">rpmfusion</code> 开头，以 <code class="highlight-rouge">.repo</code> 结尾的文件。具体而言，需要将文件中的 <code class="highlight-rouge">baseurl=</code> 开头的行等号后面链接中的 <code class="highlight-rouge">http://download1.rpmfusion.org/</code> 替换为 <code class="highlight-rouge">https://mirror.bjtu.edu.cn/rpmfusion/</code>，替换后的文件类似如下：</p>
 <pre>
 [rpmfusion-free]
 name=RPM Fusion for Fedora $releasever - Free
-baseurl=https://mirror.bjtu.edu.cn/disk2/rpmfusion/free/fedora/releases/$releasever/Everything/$basearch/os/
+baseurl=https://mirror.bjtu.edu.cn/rpmfusion/free/fedora/releases/$releasever/Everything/$basearch/os/
 mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-$releasever&arch=$basearch
 enabled=1
 metadata_expire=7d
@@ -35,7 +35,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever-$ba
 
 [rpmfusion-free-source]
 name=RPM Fusion for Fedora $releasever - Free - Source
-baseurl=https://mirror.bjtu.edu.cn/disk2/rpmfusion/free/fedora/releases/$releasever/Everything/source/SRPMS/
+baseurl=https://mirror.bjtu.edu.cn/rpmfusion/free/fedora/releases/$releasever/Everything/source/SRPMS/
 mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-source-$releasever&arch=$basearch
 enabled=0
 metadata_expire=7d

@@ -5,7 +5,7 @@ layout: help
 ---
 <p><code>gentoo</code> 镜像为 Gentoo Linux 的软件包镜像，包含  distfiles，liveDVD，stage3 等文件，ebuilds 镜像为 <code> gentoo-portage</code>。</p>
 <h3>使用方式</h3>
-<p>用你喜欢的编辑器编辑 <code>/etc/portage/make.conf</code> ，找到 <code>GENTOO_MIRRORS</code> 变量，修改为 <code class="highlight-rouge">GENTOO_MIRRORS="https://mirror.bjtu.edu.cn/disk3/gentoo/"</code>。</p>
+<p>用你喜欢的编辑器编辑 <code>/etc/portage/make.conf</code> ，找到 <code>GENTOO_MIRRORS</code> 变量，修改为 <code class="highlight-rouge">GENTOO_MIRRORS="https://mirror.bjtu.edu.cn/gentoo/"</code>。</p>
 <p>一个完整的 <code>/etc/portage/make.conf</code> 文件样例如下（来自一位不愿意透露姓名的热心 Gentoo 用户张三同志）（由于 Gentoo Linux 存在较高配置灵活性，切勿直接复制此文件！）：</p>
 <pre>
 # These settings were set by the catalyst build script that automatically
@@ -40,7 +40,7 @@ ALSA_CARDS="hda-intel"
 INPUT_DEVICES="libinput"
 MAKEOPTS="--quiet -j3"
 EMERGE_DEFAULT_OPS="--keep-going --with-bdeps=y --verbose --quiet"
-GENTOO_MIRRORS="https://mirror.bjtu.edu.cn/disk3/gentoo/"
+GENTOO_MIRRORS="https://mirror.bjtu.edu.cn/gentoo/"
 PORTAGE_TMPDIR="/tmp"
 ACCEPT_KEYWORDS="~amd64"
 ACCEPT_LICENSE="*"
