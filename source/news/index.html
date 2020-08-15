@@ -3,6 +3,66 @@ title: 新闻
 layout: news
 date: 2017-11-14 20:54:26
 ---
+<h2><a name="Add-Old-News"># 补充了过去一年的旧闻</a></h2>
+<div class="news-info">
+	<p>
+		<i class="fa fa-calendar"></i> <span>2020-08-15</span>
+		<i class="fa fa-user"></i> <span>Chestnut</span>
+	</p>
+</div>
+<p>新前端已经在路上了，咕咕咕咕咕咕咕......</p>
+<h2><a name="Add-FreeBSD"># 增加了FreeBSD pkg/ports/portsnap/update反代</a></h2>
+<div class="news-info">
+	<p>
+		<i class="fa fa-calendar"></i> <span>2020-08-10</span>
+		<i class="fa fa-user"></i> <span>Chestnut</span>
+	</p>
+</div>
+<p>使用方法已经更新至帮助页面，反向代理缓存有效期为5分钟，如遇到异常请稍后重试，其他问题请提交issue。</p>
+<p>由于该发行版没有自带根证书，开放了裸http访问，但是强烈建议您使用https访问代理，以保证安全性和可靠性。</p>
+<p>原openwrt反代也一并开放了裸http访问。</p>
+<h2><a name="Remove-Pypi"># 移除pypi镜像&优化了ZFS参数</a></h2>
+<div class="news-info">
+	<p>
+		<i class="fa fa-calendar"></i> <span>2020-02-23</span>
+		<i class="fa fa-user"></i> <span>Chestnut</span>
+	</p>
+</div>
+<p>因pypi占用了接近三分之一的磁盘空间，且实际访问量过小，同步压力较大，为保证整体服务质量，将pypi镜像进行了移除，原有地址将被301重定向至tuna源。</p>
+<p>优化了ZFS的参数，极大降低了磁盘的读写压力，提高了镜像站的吞吐量。</p>
+<h2><a name="Fix-Bad-Fibre"># 修复了光纤断裂的bug</a></h2>
+<div class="news-info">
+	<p>
+		<i class="fa fa-calendar"></i> <span>2019-09-19</span>
+		<i class="fa fa-user"></i> <span>Chestnut</span>
+	</p>
+</div>
+<p>因为交换机所接光纤断裂迟迟没有维修，现已将服务器切换至另一交换机，带来不便敬请谅解。</p>
+<h2><a name="Move-To-ZFS"># 磁盘格式迁移至ZFS</a></h2>
+<div class="news-info">
+	<p>
+		<i class="fa fa-calendar"></i> <span>2019-08-01</span>
+		<i class="fa fa-user"></i> <span>Chestnut</span>
+	</p>
+</div>
+<p>因为学校分配了三块大小不同的三个磁盘阵列，现在分别挂载不仅安排镜像位置较为麻烦，而且读写压力过于不均衡，磁盘空间浪费较大。因此近期将会将磁盘格式迁移至ZFS，空间占用过大不便迁移的镜像可能会被清理后重新同步，届时服务将会中断。</p>
+<p>迁移后，镜像的路径将发生改变，原有的disk2，disk3不再使用。</p>
+<h2><a name="Fix-Grafana-Vnstat"># 修复了状态页面的Grafana和Vnstat</a></h2>
+<div class="news-info">
+	<p>
+		<i class="fa fa-calendar"></i> <span>2019-05-10</span>
+		<i class="fa fa-user"></i> <span>Chestnut</span>
+	</p>
+</div>
+<p>年久失修的镜像站现已被重新接管，报错的状态监测已经恢复正常。</p>
+<h2><a name="Fix-Bad-Files"># 修复了部分损坏的镜像</a></h2>
+<div class="news-info">
+	<p>
+		<i class="fa fa-calendar"></i> <span>2019-05-09</span>
+		<i class="fa fa-user"></i> <span>Chestnut</span>
+	</p>
+</div>
+<p>由于未知原因，部分镜像（见issue#6）出现了损坏情况，经删除后重新同步，已经恢复正常。</p>
 <h2><a name="Clean-Long-Log"># 清除根目录下过大日志</a></h2>
 <div class="news-info">
 	<p>
@@ -11,7 +71,7 @@ date: 2017-11-14 20:54:26
 	</p>
 </div>
 <p>由于 Nginx 的日志体积增加，占据了根目录剩余的少量空间，导致寒假期间 mirror 未能及时同步镜像。今天清空了旧的 Nginx 日志，重新挂载了硬盘，已经可以继续运行同步进程了。至于为什么寒假的事情现在才处理……因为这个 mirror 设置为只有校园网内网才能 ssh 连接，同时校园网 VPN 的 Linux 客户端不好用，我又没在 Windows 下处理过 ssh……（逃</p>
-<h2><a name="Remove-Change-Mirrors"># 添加新硬盘完成</a></h2>
+<h2><a name="Add-New-Disks"># 添加新硬盘完成</a></h2>
 <div class="news-info">
 	<p>
 		<i class="fa fa-calendar"></i> <span>2018-07-22</span>
