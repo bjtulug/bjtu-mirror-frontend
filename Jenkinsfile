@@ -1,5 +1,9 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'main'
+    }
+  }
   environment {
     HOME = '.'
   }
@@ -7,6 +11,7 @@ pipeline {
     stage('Start') {
       agent { 
         docker {
+          label 'main'
           image 'node:lts-alpine'
           args '-v /home/bob/public:/tmp/public'
         } 
