@@ -77,7 +77,7 @@ theme_config:
   info: <p>由 北京交通大学 Linux 用户协会 维护</p>
    <p>感谢 <a href="http://ic.bjtu.edu.cn/" target="_blank">北京交通大学信息中心</a> 提供服务器、存储、带宽</p>
    <p>特别感谢 维护者 Bob Gao Ideal AlynxZhou Chestnut Paul Zhang</p>
-   <p>如果遇到问题请 <a href="https://github.com/bjtulug/bjtu-mirror-issues" target="_blank">提交 issue</a></p>
+   <p>如果遇到问题请联系 Chestnut#bjtu.edu.cn </p>
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
