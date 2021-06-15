@@ -21,7 +21,7 @@ pipeline {
           steps {
             sh 'ln -s /tmp/public public'
             sh 'sed -i \'/"resolved":/d\' package-lock.json || exit 0'
-            sh 'npm config set registry https://npm-registry.mirror.bjtulug.org'
+            sh 'npm config set registry https://registry.npm.taobao.org'
             sh 'npm ci'
           }
         }
