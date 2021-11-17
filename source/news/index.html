@@ -3,6 +3,15 @@ title: 新闻
 layout: news
 date: 2017-11-14 20:54:26
 ---
+<h2><a name="Add-Old-News"># 修复了挂掉的FreeBSD镜像</a></h2>
+<div class="news-info">
+	<p>
+		<i class="fa fa-calendar"></i> <span>2021-11-17</span>
+		<i class="fa fa-user"></i> <span>Chestnut</span>
+	</p>
+</div>
+<p>如果仍有问题请通过邮件或是Github联系我</p>
+
 <h2><a name="Add-Old-News"># 补充了过去一年的旧闻</a></h2>
 <div class="news-info">
 	<p>
@@ -11,6 +20,7 @@ date: 2017-11-14 20:54:26
 	</p>
 </div>
 <p>新前端已经在路上了，咕咕咕咕咕咕咕......</p>
+
 <h2><a name="Add-FreeBSD"># 增加了FreeBSD pkg/ports/portsnap/update反代</a></h2>
 <div class="news-info">
 	<p>
@@ -21,6 +31,7 @@ date: 2017-11-14 20:54:26
 <p>使用方法已经更新至帮助页面，反向代理缓存有效期为5分钟，如遇到异常请稍后重试，其他问题请提交issue。</p>
 <p>由于该发行版没有自带根证书，开放了裸http访问，但是强烈建议您使用https访问代理，以保证安全性和可靠性。</p>
 <p>原openwrt反代也一并开放了裸http访问。</p>
+
 <h2><a name="Remove-Pypi"># 移除pypi镜像&优化了ZFS参数</a></h2>
 <div class="news-info">
 	<p>
@@ -30,6 +41,7 @@ date: 2017-11-14 20:54:26
 </div>
 <p>因pypi占用了接近三分之一的磁盘空间，且实际访问量过小，同步压力较大，为保证整体服务质量，将pypi镜像进行了移除，原有地址将被301重定向至tuna源。</p>
 <p>优化了ZFS的参数，极大降低了磁盘的读写压力，提高了镜像站的吞吐量。</p>
+
 <h2><a name="Fix-Bad-Fibre"># 修复了光纤断裂的bug</a></h2>
 <div class="news-info">
 	<p>
